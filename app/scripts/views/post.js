@@ -5,11 +5,11 @@ MyBlogBackbone.Views = MyBlogBackbone.Views || {};
 (function () {
     'use strict';
 
-    MyBlogBackbone.Views.Appview = Backbone.View.extend({
+    MyBlogBackbone.Views.Post = Backbone.View.extend({
 
-        template: JST['app/scripts/templates/appView.ejs'],
+        template: JST['app/scripts/templates/post.ejs'],
 
-        el: $(''),
+        tagName: 'div',
 
         id: '',
 
