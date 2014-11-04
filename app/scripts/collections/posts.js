@@ -7,7 +7,9 @@ MyBlogBackbone.Collections = MyBlogBackbone.Collections || {};
 
     MyBlogBackbone.Collections.Posts = Backbone.Collection.extend({
 
-        model: MyBlogBackbone.Models.Posts
+        model: MyBlogBackbone.Models.Post,
+
+        url: 'https://tiny-pizza-server.herokuapp.com/collections/jv-finally-damn'
 
     });
 

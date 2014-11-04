@@ -13,6 +13,8 @@ MyBlogBackbone.Models = MyBlogBackbone.Models || {};
         },
 
         defaults: {
+            title: '',
+            postBody: ''
         },
 
         validate: function(attrs, options) {
