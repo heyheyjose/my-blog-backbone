@@ -13,16 +13,25 @@ MyBlogBackbone.Views = MyBlogBackbone.Views || {};
 
         id: '',
 
-        className: '',
+        className: 'send',
 
-        events: {},
+        events: {
+            'click .send': 'sendPost'
+        },
 
-        initialize: function () {
+        sendPost: function (event) {
+            console.log('I clicked on button!', event);
+        },
+
+        initialize: function (model) {
+            this.model = model;
             this.listenTo(this.model, 'change', this.render);
         },
 
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
+            console.log('blog entry posted');
+            return this;
         }
 
     });

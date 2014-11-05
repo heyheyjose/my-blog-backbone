@@ -4,35 +4,38 @@
 
 $app-font: 'Lato', sans-serif;
 $post-preview-font: 'Raleway', sans-serif;
-$main-container-bg: #5C97BF;
+$main-container-bg: #3B5998;
 $post-edit-bg: #BDC3C7;
 $post-preview-bg: #ECF0F1;
-$box-shadow-color: #4E5252;
-$prev-btn-bg: #F1C40F;
+$prev-btn-bg: #FFCE40;
+$prev-btn-bg-hover: #FFE41B;
 $pub-btn-bg: #27AE60;
+$pub-btn-bg-hover: #2ECC71;
 $date-color: #BDC3C7;
 
 // Custom Styles
+*:focus {
+    outline: 0; // boom! wat
+}
+
 body {
     font-family: $app-font;
 }
 
 .maing {
     @include outer-container;
-    border-radius: 7px;
+    border-radius: 8px;
     background-color: $main-container-bg;
     position: relative;
     top: 20px;
-    padding: 10px;
+    padding: 14px;
     .user-input {
         @include span-columns(6);
-        border-radius: 7px;
         background-color: $post-edit-bg;
         padding: 10px;
     }
     .user-output {
         @include span-columns(6);
-        border-radius: 7px;
         background-color: $post-preview-bg;
         padding: 10px;
     }
@@ -45,8 +48,6 @@ body {
 input {
     border: 2px;
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px $box-shadow-color;
 }
 
 textarea {
@@ -54,20 +55,34 @@ textarea {
     height: 300px;
     border: 2px;
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px $box-shadow-color;
 }
 
 .preview-button {
     background-color: $prev-btn-bg;
+    font-weight: bold;
     margin-top: 20px;
     display: block;
+    float: right;
+    border-radius: 6px;
+}
+
+.preview-button:hover {
+    background-color: $prev-btn-bg-hover;
+    cursor: pointer;
 }
 
 .publish-button {
     background-color: $pub-btn-bg;
+    font-weight: bold;
     margin-top: 20px;
     display: block;
+    float: right;
+    border-radius: 6px;
+}
+
+.publish-button:hover {
+    background-color: $pub-btn-bg-hover;
+    cursor: pointer;
 }
 
 img {
