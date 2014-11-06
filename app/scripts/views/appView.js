@@ -9,16 +9,16 @@ MyBlogBackbone.Views = MyBlogBackbone.Views || {};
 
         template: JST['app/scripts/templates/appView.ejs'],
 
-        el: $('.blog-container'),
+        el: $('.maing'),
 
         events: {
-            'click input.send': 'onSubmit'
+            'click input.preview-button': 'onSubmit'
         },
 
         onSubmit: function (event) {
             event.preventDefault();
-            var blogTitle = $('#title');
-            var blogPost = $('#post');
+            var blogTitle = $('.title-field');
+            var blogPost = $('.post-field');
             var blogOutput = new MyBlogBackbone.Models.Post({
                 title: blogTitle.val(),
                 postBody: blogPost.val()
@@ -26,21 +26,24 @@ MyBlogBackbone.Views = MyBlogBackbone.Views || {};
             blogOutput.save();
             blogTitle.val('');
             blogPost.val('');
+            MyBlogBackbone.Posts.add(blogOutput);
         },
 
         initialize: function () {
             this.listenTo(MyBlogBackbone.Posts, 'add', this.addOne);
             this.listenTo(MyBlogBackbone.Posts, 'reset', this.addAll);
             this.render();
-            MyBlogBackbone.Posts.fetch();
+            MyBlogBackbone.Posts.fetch({reset: true});
         },
 
         addOne: function (blogOutput) {
             var postView = new MyBlogBackbone.Views.Post(blogOutput);
-            $('.blog-output').append(postView.render().el); // i think this is where i need html instead of append
+            $('.post-target').html(postView.render().el); // i think this is where i need html instead of append
         },
 
-        addAll: function () {},
+        addAll: function (arg) {
+            _.each(arg.models.reverse(), this.addOne);
+        },
 
         render: function () {
             this.$el.html(this.template());

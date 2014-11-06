@@ -14,7 +14,8 @@ MyBlogBackbone.Models = MyBlogBackbone.Models || {};
 
         defaults: {
             title: '',
-            postBody: ''
+            postBody: '',
+            date: new Date()
         },
 
         validate: function(attrs, options) {

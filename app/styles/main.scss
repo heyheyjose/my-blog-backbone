@@ -3,7 +3,7 @@
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 $app-font: 'Lato', sans-serif;
-$post-preview-font: 'Raleway', sans-serif;
+$post-preview-font: 'Indie Flower', cursive;
 $main-container-bg: #3B5998;
 $post-edit-bg: #BDC3C7;
 $post-preview-bg: #ECF0F1;
@@ -34,6 +34,7 @@ body {
         background-color: $post-edit-bg;
         padding: 10px;
     }
+
     .user-output {
         @include span-columns(6);
         background-color: $post-preview-bg;
@@ -59,6 +60,7 @@ textarea {
 
 .preview-button {
     background-color: $prev-btn-bg;
+    font-family: $app-font;
     font-weight: bold;
     margin-top: 20px;
     display: block;
@@ -73,6 +75,7 @@ textarea {
 
 .publish-button {
     background-color: $pub-btn-bg;
+    font-family: $app-font;
     font-weight: bold;
     margin-top: 20px;
     display: block;
