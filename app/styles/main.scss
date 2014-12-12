@@ -7,10 +7,10 @@ $post-preview-font: 'Indie Flower', cursive;
 $main-container-bg: #3B5998;
 $post-edit-bg: #BDC3C7;
 $post-preview-bg: #ECF0F1;
-$prev-btn-bg: #FFCE40;
-$prev-btn-bg-hover: #FFE41B;
-$pub-btn-bg: #27AE60;
-$pub-btn-bg-hover: #2ECC71;
+$prev-btn-bg: #FFE41B;
+$prev-btn-bg-hover: #FFCE40;
+$pub-btn-bg: #2ECC71;
+$pub-btn-bg-hover: #27AE60;
 $date-color: #BDC3C7;
 
 // Custom Styles
@@ -66,11 +66,11 @@ textarea {
     display: block;
     float: right;
     border-radius: 6px;
-}
-
-.preview-button:hover {
-    background-color: $prev-btn-bg-hover;
-    cursor: pointer;
+    &:hover {
+        background-color: $prev-btn-bg-hover;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 }
 
 .publish-button {
@@ -81,11 +81,11 @@ textarea {
     display: block;
     float: right;
     border-radius: 6px;
-}
-
-.publish-button:hover {
-    background-color: $pub-btn-bg-hover;
-    cursor: pointer;
+    &:hover {
+        background-color: $pub-btn-bg-hover;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 }
 
 img {
@@ -96,4 +96,5 @@ img {
 
 date {
     color: $date-color;
+    font-family: $app-font;
 }
