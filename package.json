@@ -1,7 +1,9 @@
 {
   "name": "myblogbackbone",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "~4.9.x"
+    },
   "devDependencies": {
     "apache-server-configs": "^2.8.0",
     "grunt": "^0.4.5",
