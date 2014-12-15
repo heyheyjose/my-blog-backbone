@@ -16,14 +16,14 @@ MyBlogBackbone.Models = MyBlogBackbone.Models || {};
             title: '',
             postBody: '',
             date: new Date()
-        },
-
-        validate: function(attrs, options) {
-        },
-
-        parse: function(response, options)  {
-            return response;
         }
+/*
+        validate: function (attrs, options) {
+        },
+
+        parse: function (response, options) {
+            return response;
+        } */
     });
 
 })();
