@@ -88,9 +88,12 @@ textarea {
     }
 }
 
-img {
-    width: 30%;
-    height: 30%;
+.logo {
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/blog512.png);
+    background-size: cover;
+    display: inline-block;
     float: right;
 }
 
