@@ -3,7 +3,7 @@
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 $app-font: 'Lato', sans-serif;
-$post-preview-font: 'Indie Flower', cursive;
+$post-preview-font: 'Josefin Slab', serif;
 $main-container-bg: #3B5998;
 $post-edit-bg: #BDC3C7;
 $post-preview-bg: #ECF0F1;
@@ -89,8 +89,8 @@ textarea {
 }
 
 .logo {
-    width: 200px;
-    height: 200px;
+    height: 150px;
+    width: 150px;
     background-image: url(../images/blog512.png);
     background-size: cover;
     display: inline-block;

@@ -17,3 +17,8 @@ Set up:
 * yo backbone:router EXAMPLE
 
 yep, all the things! :)
+
+Build and deploy:
+
+* grunt build (does move/min assets)
+* git push heroku master
