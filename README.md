@@ -20,5 +20,5 @@ yep, all the things! :)
 
 Build and deploy:
 
-* grunt build (does move/min assets)
+* grunt build
 * git push heroku master
